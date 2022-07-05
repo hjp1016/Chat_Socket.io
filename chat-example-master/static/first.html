@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset = "utf-8">
+  <title>7조 채팅방</title>
+  <script src="/socket.io/socket.io.js"></script>
+
+
+ </head>
+ <style>
+    .start {
+     text-align: center;
+    background-color: #0bb2ff;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 630px;
+    left: 0;
+    right: 0;
+    display: block;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+    }
+    h3{
+        position: absolute;
+        top: 200px;
+        left: 137px;
+        font-family: "AppleSDGothicNeoL00 Regular";
+        color: white;
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 20px;
+        margin: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    .user_name{
+    position: absolute;    
+    width: 200px;
+    height: 28px;
+    background-color: #f7f5f5;
+    border-radius: 20px;
+    border: none;
+    top: 380px;
+    font-size: 18px;
+    color: #0c0d0d;
+    font-family: "AppleSDGothicNeoB00";
+    letter-spacing: 1px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center
+    }
+
+    .btn{
+    position: absolute;
+    width: 90px;
+    height: 28px;
+    background-color: #f7f5f5;
+    border-radius: 20px;
+    border: none;
+    top: 430px;
+    left: 135px;
+    font-size: 18px;
+    color: #0b81ff;
+    font-family: "AppleSDGothicNeoB00";
+    letter-spacing: 1px;
+    margin: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+ </style>
+
+ <body>
+    <div class="start" style="height: 630px;">
+        <h3>7조 채팅방!</h3>
+        
+        <input type="button" class="btn" id="btn" value="입장하기!">
+        <input style type="text" class="user_name" id="user_name" placeholder="닉네임을 입력하세요">
+        <script type="text/javascript">
+            var btn = document.getElementById('btn');
+            var name = document.getElementById('user_name');
+
+
+            btn.addEventListener('click', function(e){
+                location.href =  "/index/?user="+user_name.value;
+            })
+
+            
+        </script>
+    </div>
+</body>
+</html>
